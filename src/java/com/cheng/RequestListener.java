@@ -53,9 +53,9 @@ public class RequestListener implements ServletRequestListener {
                 rs.updateRow();
                 rs.close();
             } else {
-                dd.insert("insert into online_inf values(?,?,?,?,?)", 
+                dd.insert("insert into online_inf values(?,?,?,?,?)",
                         sessionId, user, ip, page, System.currentTimeMillis());
-                
+
             }
         } catch (SQLException ex) {
             Logger.getLogger(RequestListener.class.getName()).log(Level.SEVERE, null, ex);
